@@ -180,7 +180,7 @@ function flowRequest() {
 
 function loadingRequest() {
   if (currentScreen === 2) {
-    setTimeout(() => {
+    setTimeout( () => {
       currentScreen = 3;
     }, 3000)
   }
