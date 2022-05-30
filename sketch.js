@@ -21,7 +21,7 @@ function draw() {
 }
 
 function mousePressed() {
-  menu();
+  menuBar();
   flowRequest();
 }
 
@@ -47,38 +47,44 @@ function button({
   }
 }
 
-function menu() {
-  chat();
-  ongoingRequests();
-  completedRequest();
+function menuBar() {
+  if (currentScreen === 1) {
+    chat({x: 51, y: 961, w: 27, h: 73});
+    ongoingRequests({x: 185, y: 961, w: 60, h: 73});
+    completedRequest({x: 333, y: 961, w: 44, h: 73});
+  } else {
+    chat({x: 51, y: 853, w: 27, h: 73});
+    ongoingRequests({x: 185, y: 853, w: 60, h: 73});
+    completedRequest({x: 333, y: 853, w: 44, h: 73});
+  }
 }
 
-function chat() {
+function chat({x, y, w, h}) {
   button({
-    xButton: 51,
-    yButton: 853,
-    wButton: 27,
-    hButton: 73,
+    xButton: x,
+    yButton: y,
+    wButton: w,
+    hButton: h,
     screen: 0
   });
 }
 
-function ongoingRequests() {
+function ongoingRequests({x, y, w, h}) {
   button({
-    xButton: 185,
-    yButton: 853,
-    wButton: 60,
-    hButton: 73,
+    xButton: x,
+    yButton: y,
+    wButton: w,
+    hButton: h,
     screen: 4
   });
 }
 
-function completedRequest() {
+function completedRequest({x, y, w, h}) {
   button({
-    xButton: 333,
-    yButton: 853,
-    wButton: 44,
-    hButton: 73,
+    xButton: x,
+    yButton: y,
+    wButton: w,
+    hButton: h,
     screen: 5
   });
 }
