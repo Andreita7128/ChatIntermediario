@@ -11,11 +11,11 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(428, 926);
+  createCanvas(428, 1034);
 }
 
 function draw() {
-  background(220);
+  background(250);
   showScreen();
   loadingRequest();
 }
@@ -133,14 +133,14 @@ function flowRequest() {
       back(0);
       button({
         xButton: 55,
-        yButton: 752,
+        yButton: 869,
         wButton: 146,
         hButton: 52,
         screen: 2
       });
       button({
         xButton: 226,
-        yButton: 752,
+        yButton: 869,
         wButton: 146,
         hButton: 52,
         screen: 0
@@ -182,6 +182,6 @@ function loadingRequest() {
   if (currentScreen === 2) {
     setTimeout( () => {
       currentScreen = 3;
-    }, 3000)
+    }, 2000)
   }
 }
